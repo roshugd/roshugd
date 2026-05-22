@@ -534,6 +534,36 @@ async def rules_history():
 async def delete_rule(rule_id: int):
     return {"deleted": True}
 
+@app.get("/api/outputs")
+async def list_outputs():
+    """List all cleaned output files in the outputs/ folder."""
+    outputs_dir = Path("outputs")
+    if not outputs_dir.exists():
+        return []
+    files = []
+    for f in sorted(outputs_dir.glob("*.csv"), reverse=True):
+        stat = f.stat()
+        files.append({
+            "filename":   f.name,
+            "size_kb":    round(stat.st_size / 1024, 1),
+            "created_at": datetime.utcfromtimestamp(stat.st_mtime).strftime("%Y-%m-%d %H:%M:%S"),
+            "path":       str(f),
+        })
+    return files
+
+@app.get("/api/outputs/download/{filename}")
+async def download_output(filename: str):
+    """Download a specific cleaned output file."""
+    path = Path("outputs") / filename
+    if not path.exists():
+        raise HTTPException(404, "File not found")
+    return FileResponse(
+        path,
+        filename=filename,
+        media_type="text/csv",
+        headers={"Content-Disposition": f"attachment; filename={filename}"}
+    )
+
 @app.get("/api/runs")
 async def list_runs():
     result = []
@@ -604,9 +634,22 @@ def _run_pipeline_thread(run_id: str, session_id: str, column_rules: dict):
             emit("Fixer", "✓ No failures to fix", "success")
 
         emit("Reporter", "📊 Generating report...", "agent")
+
+        # ── Save to reports/run_id/ (original path — for download endpoint) ──
         job_dir = REPORTS_DIR / run_id
         job_dir.mkdir(parents=True, exist_ok=True)
         fixed_df.to_csv(job_dir / "cleaned_data.csv", index=False)
+
+        # ── Also save to outputs/ with meaningful filename ──────────────────
+        outputs_dir = Path("outputs")
+        outputs_dir.mkdir(parents=True, exist_ok=True)
+        ts         = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+        session    = SESSIONS.get(session_id, {})
+        profile    = session.get("profile", {})
+        tbl_name   = profile.get("table_name", "data").replace("+","_")[:30]
+        out_name   = f"{tbl_name}_cleaned_{ts}.csv"
+        fixed_df.to_csv(outputs_dir / out_name, index=False)
+        emit("Reporter", f"✓ Cleaned file saved → outputs/{out_name}", "success")
 
         # Mark fix_applied on results
         for r in results:

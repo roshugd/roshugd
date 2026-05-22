@@ -339,6 +339,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:14
       <button class="nav-item" onclick="showDashboard()"><span>📊</span> Dashboard</button>
       <button class="nav-item" onclick="showRunHistory()"><span>🕒</span> Run History</button>
       <button class="nav-item" id="dl-sidebar" style="display:none" onclick="downloadCleaned()"><span>⬇️</span> Download Cleaned</button>
+      <button class="nav-item" onclick="showOutputsPanel()"><span>📁</span> Output Files</button>
       <button class="nav-item" onclick="showGitPanel()"><span>🐙</span> Push to GitHub</button>
     </div>
     <div class="sidebar-section">
@@ -611,6 +612,29 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:14
         <div style="margin-top:14px;display:flex;justify-content:flex-end;gap:10px">
           <button class="btn-secondary" onclick="downloadCleaned()">⬇️ Download cleaned_data.xlsx</button>
           <button class="btn-dash" onclick="showDashboard()">📊 Dashboard</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ OUTPUTS PANEL ═══ -->
+    <div class="section" id="outputs-panel" style="display:none">
+      <div style="background:var(--primary);padding:18px 24px;border-radius:var(--radius-lg) var(--radius-lg) 0 0;display:flex;align-items:center;justify-content:space-between;">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span style="font-size:22px;">📁</span>
+          <div>
+            <div style="font-size:16px;font-weight:700;color:white;">Output Files</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.6);margin-top:2px;">All cleaned CSV files with DQ flag columns</div>
+          </div>
+        </div>
+        <button onclick="hidePanel('outputs-panel')" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:white;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:13px;">✕ Close</button>
+      </div>
+      <div style="background:white;border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius-lg) var(--radius-lg);padding:20px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+          <div style="font-size:13px;color:var(--text2);">Files are saved in <code style="background:var(--gray-light);padding:2px 7px;border-radius:4px;font-size:12px;">outputs/</code> folder with table name + timestamp</div>
+          <button onclick="loadOutputFiles()" style="background:var(--primary-light);border:1px solid var(--primary);color:var(--primary);padding:6px 14px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600;">🔄 Refresh</button>
+        </div>
+        <div id="outputs-list">
+          <div style="text-align:center;padding:28px;color:var(--text3);">Loading output files...</div>
         </div>
       </div>
     </div>
@@ -1849,6 +1873,62 @@ function toast(msg, type='success') {
 }
 
 function esc(t) { return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+// ── OUTPUTS PANEL ─────────────────────────────────────────────────────────────
+function showOutputsPanel() {
+  ['dashboard-panel','run-history-panel','git-panel'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+  });
+  const panel = document.getElementById('outputs-panel');
+  panel.style.display = 'block';
+  panel.scrollIntoView({ behavior: 'smooth' });
+  loadOutputFiles();
+}
+
+async function loadOutputFiles() {
+  const box = document.getElementById('outputs-list');
+  box.innerHTML = '<div style="text-align:center;padding:20px;color:var(--text3);">Loading...</div>';
+  try {
+    const r = await fetch('/api/outputs');
+    const files = await r.json();
+    if (!files.length) {
+      box.innerHTML = '<div style="text-align:center;padding:28px;color:var(--text3);">No output files yet — run a pipeline first.</div>';
+      return;
+    }
+    box.innerHTML = `
+      <table style="width:100%;border-collapse:collapse;font-size:13px;">
+        <thead>
+          <tr style="background:var(--gray-light);">
+            <th style="padding:9px 12px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);">File Name</th>
+            <th style="padding:9px 12px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);">Size</th>
+            <th style="padding:9px 12px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);">Created</th>
+            <th style="padding:9px 12px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);">Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${files.map((f,i) => `
+            <tr style="border-bottom:1px solid var(--border);${i%2===0?'background:#fafafa':''}">
+              <td style="padding:10px 12px;font-family:monospace;font-size:12px;color:var(--text);">📄 ${f.filename}</td>
+              <td style="padding:10px 12px;color:var(--text2);">${f.size_kb} KB</td>
+              <td style="padding:10px 12px;color:var(--text2);">${f.created_at}</td>
+              <td style="padding:10px 12px;">
+                <a href="/api/outputs/download/${encodeURIComponent(f.filename)}"
+                   download="${f.filename}"
+                   style="background:var(--primary);color:white;padding:5px 12px;border-radius:5px;text-decoration:none;font-size:12px;font-weight:600;">
+                  ⬇️ Download
+                </a>
+              </td>
+            </tr>`).join('')}
+        </tbody>
+      </table>
+      <div style="margin-top:12px;padding:10px 14px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:7px;font-size:12px;color:#15803d;">
+        ✓ Files are saved in the <strong>outputs/</strong> folder inside your project — you can also open them directly from there.
+      </div>`;
+  } catch(e) {
+    box.innerHTML = `<div style="color:red;padding:16px;">Error loading files: ${e.message}</div>`;
+  }
+}
 
 // ── GIT PUSH FUNCTIONS ─────────────────────────────────────────────────────
 function showGitPanel() {
