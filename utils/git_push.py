@@ -110,15 +110,19 @@ def push_to_git(commit_message=None, branch="main",
         gi.write_text(".env\n*.db\ndata/uploads/\n__pycache__/\n*.pyc\n.venv/\nvenv/\n")
         logs.append("Created .gitignore")
 
-    # Stage files
+    # Stage files — explicit paths + catch-all for any new untracked files
     paths = ["agents/","utils/","ui/","data/sample/",
-             "requirements.txt","run_ui.py","CLAUDE.md",".gitignore"]
+             "requirements.txt","run_ui.py","CLAUDE.md",
+             ".gitignore","output_config.json"]
     if include_reports:
         paths.append("reports/")
     for p in paths:
         out, err, rc = _run(["git", "add", p], cwd)
         if err and "pathspec" not in err and "did not match" not in err:
             logs.append(f"add {p}: {err}")
+
+    # Stage any remaining modified or new files not in .gitignore
+    _run(["git", "add", "-A", "--ignore-errors"], cwd)
 
     # Check anything to commit
     out, _, _ = _run(["git", "status", "--porcelain"], cwd)
