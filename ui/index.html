@@ -339,6 +339,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:14
       <button class="nav-item" onclick="showDashboard()"><span>📊</span> Dashboard</button>
       <button class="nav-item" onclick="showRunHistory()"><span>🕒</span> Run History</button>
       <button class="nav-item" id="dl-sidebar" style="display:none" onclick="downloadCleaned()"><span>⬇️</span> Download Cleaned</button>
+      <button class="nav-item" onclick="showGitPanel()"><span>🐙</span> Push to GitHub</button>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-label">Agent Status</div>
@@ -610,6 +611,67 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:14
         <div style="margin-top:14px;display:flex;justify-content:flex-end;gap:10px">
           <button class="btn-secondary" onclick="downloadCleaned()">⬇️ Download cleaned_data.xlsx</button>
           <button class="btn-dash" onclick="showDashboard()">📊 Dashboard</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ GIT PUSH PANEL ═══ -->
+    <div class="section" id="git-panel" style="display:none">
+      <div style="background:#24292e;padding:18px 24px;border-radius:var(--radius-lg) var(--radius-lg) 0 0;display:flex;align-items:center;justify-content:space-between;">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span style="font-size:24px;">🐙</span>
+          <div>
+            <div style="font-size:16px;font-weight:700;color:white;">Push to GitHub</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.55);margin-top:2px;">Auto-commit and push your code</div>
+          </div>
+        </div>
+        <button onclick="hidePanel('git-panel')" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:white;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:13px;">✕ Close</button>
+      </div>
+      <div style="background:white;border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius-lg) var(--radius-lg);padding:24px;">
+
+        <!-- Git Status -->
+        <div id="git-status-box" style="background:#f6f8fa;border:1px solid #d0d7de;border-radius:8px;padding:14px 16px;margin-bottom:18px;font-size:13px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-weight:600;color:#24292e;">Git Status</span>
+            <button onclick="checkGitStatus()" style="background:#f6f8fa;border:1px solid #d0d7de;border-radius:6px;padding:4px 12px;font-size:12px;cursor:pointer;">🔄 Refresh</button>
+          </div>
+          <div id="git-status-text" style="margin-top:8px;color:#57606a;font-family:monospace;font-size:12px;">Click Refresh to check status...</div>
+        </div>
+
+        <!-- Commit message -->
+        <div style="margin-bottom:16px;">
+          <label style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#57606a;display:block;margin-bottom:6px;">Commit Message</label>
+          <input id="git-commit-msg" type="text"
+            style="width:100%;padding:9px 12px;border:1px solid #d0d7de;border-radius:6px;font-size:13px;outline:none;"
+            placeholder="e.g. Updated DQ rules and sample data"
+            value="">
+        </div>
+
+        <!-- Branch -->
+        <div style="margin-bottom:16px;">
+          <label style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#57606a;display:block;margin-bottom:6px;">Branch</label>
+          <input id="git-branch" type="text"
+            style="width:200px;padding:9px 12px;border:1px solid #d0d7de;border-radius:6px;font-size:13px;outline:none;"
+            value="main">
+        </div>
+
+        <!-- Push button -->
+        <button id="git-push-btn" onclick="doPush()"
+          style="background:#2da44e;border:none;color:white;padding:11px 28px;border-radius:7px;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px;transition:background .15s;">
+          🐙 Commit &amp; Push to GitHub
+        </button>
+
+        <!-- Output log -->
+        <div id="git-log" style="display:none;margin-top:18px;background:#0d1117;border-radius:8px;padding:14px 16px;font-family:monospace;font-size:12px;color:#3fb950;line-height:1.8;max-height:220px;overflow-y:auto;"></div>
+
+        <!-- Info box -->
+        <div style="margin-top:18px;padding:12px 14px;background:#ddf4ff;border:1px solid #54aeff;border-radius:7px;font-size:12px;color:#0969da;line-height:1.7;">
+          <strong>ℹ️ Make sure your .env file has:</strong><br>
+          GIT_REPO_URL=https://github.com/roshugd/roshugd.git<br>
+          GIT_USERNAME=roshugd<br>
+          GIT_EMAIL=your-email@gmail.com<br>
+          GIT_TOKEN=ghp_your_token_here<br>
+          GIT_BRANCH=main
         </div>
       </div>
     </div>
@@ -1787,6 +1849,95 @@ function toast(msg, type='success') {
 }
 
 function esc(t) { return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+// ── GIT PUSH FUNCTIONS ─────────────────────────────────────────────────────
+function showGitPanel() {
+  ['dashboard-panel','run-history-panel'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+  });
+  const panel = document.getElementById('git-panel');
+  panel.style.display = 'block';
+  panel.scrollIntoView({ behavior: 'smooth' });
+  const ts = new Date().toISOString().slice(0,16).replace('T',' ');
+  document.getElementById('git-commit-msg').value = `DQ Platform update — ${ts}`;
+  checkGitStatus();
+}
+
+async function checkGitStatus() {
+  const box = document.getElementById('git-status-text');
+  box.style.color = '#57606a';
+  box.textContent = 'Checking...';
+  try {
+    const r = await fetch('/api/git/status');
+    const d = await r.json();
+    if (!d.initialized) {
+      box.style.color = '#cf222e';
+      box.textContent = '✗ Not a git repo yet — first push will initialise it automatically.';
+      return;
+    }
+    let txt = `✓ Branch: ${d.branch || 'main'}\n✓ Remote: ${d.remote || '(none)'}\n`;
+    txt += d.has_changes ? '⚠ Uncommitted changes detected — ready to push.\n' : '✓ Nothing to commit — already up to date.\n';
+    if (d.recent_commits && d.recent_commits.length)
+      txt += '\nRecent commits:\n' + d.recent_commits.slice(0,3).map(c => '  ' + c).join('\n');
+    box.style.color = '#2da44e';
+    box.textContent = txt;
+  } catch(e) {
+    box.style.color = '#cf222e';
+    box.textContent = '✗ Could not reach server: ' + e.message;
+  }
+}
+
+async function doPush() {
+  const btn    = document.getElementById('git-push-btn');
+  const logBox = document.getElementById('git-log');
+  const msg    = document.getElementById('git-commit-msg').value.trim()
+                 || `DQ Platform update — ${new Date().toISOString().slice(0,16)}`;
+  const branch = document.getElementById('git-branch').value.trim() || 'main';
+
+  btn.disabled = true;
+  btn.textContent = '⏳ Pushing...';
+  logBox.style.display = 'block';
+  logBox.style.color   = '#3fb950';
+  logBox.textContent   = '⏳ Starting git push...\n';
+
+  try {
+    logBox.textContent += '📋 Reading git config from .env...\n';
+    const pushR = await fetch('/api/git/push', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ commit_message: msg, branch, include_reports: false })
+    });
+    const pushD = await pushR.json();
+    if (pushD.ok) {
+      logBox.style.color   = '#3fb950';
+      logBox.textContent  += `\n✅ ${pushD.message || 'Pushed successfully!'}\n`;
+      if (pushD.commit_hash) logBox.textContent += `   Commit: ${pushD.commit_hash}\n`;
+      (pushD.logs || []).forEach(l => logBox.textContent += `   ${l}\n`);
+      btn.textContent = '✅ Pushed!';
+      btn.style.background = '#2da44e';
+      checkGitStatus();
+    } else {
+      logBox.style.color   = '#f85149';
+      logBox.textContent  += `\n❌ Push failed: ${pushD.error || 'unknown error'}\n`;
+      if (pushD.hint) logBox.textContent += `💡 Hint: ${pushD.hint}\n`;
+      (pushD.logs || []).forEach(l => logBox.textContent += `   ${l}\n`);
+      btn.textContent = '❌ Failed — see log';
+      btn.style.background = '#cf222e';
+    }
+  } catch(e) {
+    logBox.style.color   = '#f85149';
+    logBox.textContent  += `\n❌ Error: ${e.message}\n`;
+    btn.textContent = '❌ Error';
+  } finally {
+    btn.disabled = false;
+    setTimeout(() => {
+      btn.textContent = '🐙 Commit & Push to GitHub';
+      btn.style.background = '#2da44e';
+    }, 4000);
+    logBox.scrollTop = logBox.scrollHeight;
+  }
+}
 </script>
 </body>
 </html>
