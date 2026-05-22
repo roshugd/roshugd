@@ -1,0 +1,280 @@
+holiday_id,holiday_name,holiday_date,day_of_week,holiday_type,location,country,year,is_optional,applicable_depts,created_by,created_date
+HOL000001,Labor Day,2023-01-16,Monday,Company Holiday,New York,USA,2023,N,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000002,New Year,2023-07-28,Friday,Religious Holiday,New York,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000003,Memorial Day,2023-12-17,Sunday,Bank Holiday,New York,USA,2023,Y,"Sales,Marketing",HR_ADMIN,2022-11-15
+HOL000004,New Year,2023-05-27,Saturday,Religious Holiday,New York,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000005,Christmas,2023-04-16,Sunday,Company Holiday,New York,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000006,Independence Day,2023-10-21,Saturday,National Holiday,New York,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000007,,2023-06-08,Thursday,Bank Holiday,New York,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000008,Labor Day,2023-08-03,Thursday,Bank Holiday,New York,USA,2023,Y,"Sales,Marketing",HR_ADMIN,2022-11-15
+HOL000009,Christmas,2023-07-08,Saturday,National Holiday,New York,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000010,MLK Day,2023-02-11,Saturday,Religious Holiday,New York,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000011,Labor Day,2023-11-20,Monday,National Holiday,New York,USA,2023,Y,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000012,Presidents Day,INVALID-DATE-FORMAT,Wednesday,Bank Holiday,New York,USA,2023,Y,All,HR_ADMIN,2022-11-15
+HOL000013,Christmas,2023-12-14,Thursday,National Holiday,New York,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000014,,2023-03-12,Sunday,Optional Holiday,London,UK,2023,N,"Sales,Marketing",HR_ADMIN,2022-11-15
+HOL000015,Good Friday,2023-11-23,Thursday,Optional Holiday,London,UK,2023,N,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000016,Spring Bank Holiday,2023-07-01,Saturday,Optional Holiday,London,UK,2023,N,All,HR_ADMIN,2022-11-15
+HOL000017,Early May Bank Holiday,2023-09-02,Saturday,Optional Holiday,London,UK,2023,N,All,HR_ADMIN,2022-11-15
+HOL000018,Christmas Day,2023-11-22,Wednesday,Religious Holiday,London,UK,2023,N,All,HR_ADMIN,2022-11-15
+HOL000019,Christmas Day,2023-05-29,Monday,Religious Holiday,London,UK,2023,N,All,HR_ADMIN,2022-11-15
+HOL000020,Good Friday,2023-06-19,Monday,Bank Holiday,London,UK,1899,Y,All,HR_ADMIN,2022-11-15
+HOL000021,,2023-01-13,Friday,Optional Holiday,London,UK,2023,N,"Sales,Marketing",HR_ADMIN,2022-11-15
+HOL000022,Christmas Day,2023-12-09,Saturday,Religious Holiday,London,UK,2023,N,All,HR_ADMIN,2022-11-15
+HOL000023,Boxing Day,2023-04-19,Wednesday,Optional Holiday,London,UK,2023,N,"Sales,Marketing",HR_ADMIN,2022-11-15
+HOL000024,Early May Bank Holiday,INVALID-DATE-FORMAT,Thursday,Bank Holiday,London,UK,2023,N,All,HR_ADMIN,2022-11-15
+HOL000025,Spring Bank Holiday,2023-12-06,Saturday,Optional Holiday,London,UK,2023,Y,"Sales,Marketing",HR_ADMIN,2022-11-15
+HOL000026,Independence Day,2023-11-19,Sunday,Optional Holiday,Mumbai,India,2023,Y,All,HR_ADMIN,2022-11-15
+HOL000027,New Year,2023-03-25,Saturday,Bank Holiday,Mumbai,India,2023,N,All,HR_ADMIN,2022-11-15
+HOL000028,,2023-07-29,Saturday,Bank Holiday,Mumbai,India,2023,N,All,HR_ADMIN,2022-11-15
+HOL000029,Eid ul-Fitr,2023-12-28,Thursday,Company Holiday,Mumbai,India,2023,N,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000030,Republic Day,2023-09-20,Wednesday,Company Holiday,Mumbai,India,2023,N,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000031,Republic Day,2023-07-03,Monday,Religious Holiday,Mumbai,India,2023,N,All,HR_ADMIN,2022-11-15
+HOL000032,Independence Day,2023-11-02,Thursday,National Holiday,Mumbai,India,2023,Y,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000033,Holi,2023-03-10,Friday,Religious Holiday,Mumbai,India,2023,Y,All,HR_ADMIN,2022-11-15
+HOL000034,Dussehra,2023-01-03,Tuesday,National Holiday,Mumbai,India,2023,N,All,HR_ADMIN,2022-11-15
+HOL000035,,2023-08-15,Tuesday,National Holiday,Mumbai,India,2023,Y,All,HR_ADMIN,2022-11-15
+HOL000036,Dussehra,INVALID-DATE-FORMAT,Wednesday,National Holiday,Mumbai,India,2023,Y,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000037,Independence Day,2023-05-28,Sunday,Religious Holiday,Mumbai,India,2023,N,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000038,Holi,2023-04-04,Tuesday,National Holiday,Mumbai,India,2023,N,All,HR_ADMIN,2022-11-15
+HOL000039,Republic Day,2023-03-06,Monday,Bank Holiday,Bengaluru,India,2023,N,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000040,Independence Day,2023-12-01,Friday,National Holiday,Bengaluru,India,1899,Y,All,HR_ADMIN,2022-11-15
+HOL000041,Dussehra,2023-06-21,Wednesday,Religious Holiday,Bengaluru,India,2023,N,All,HR_ADMIN,2022-11-15
+HOL000042,,2023-11-03,Friday,Company Holiday,Bengaluru,India,2023,N,"Sales,Marketing",HR_ADMIN,2022-11-15
+HOL000043,Eid ul-Fitr,2023-03-30,Thursday,Bank Holiday,Bengaluru,India,2023,N,All,HR_ADMIN,2022-11-15
+HOL000044,Independence Day,2023-07-10,Monday,Religious Holiday,Bengaluru,India,2023,N,All,HR_ADMIN,2022-11-15
+HOL000045,Christmas,2023-01-25,Wednesday,Religious Holiday,Bengaluru,India,2023,N,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000046,New Year,2023-11-29,Wednesday,Optional Holiday,Bengaluru,India,2023,Y,"Sales,Marketing",HR_ADMIN,2022-11-15
+HOL000047,Eid ul-Fitr,2023-04-02,Sunday,National Holiday,Bengaluru,India,2023,Y,All,HR_ADMIN,2022-11-15
+HOL000048,Dussehra,INVALID-DATE-FORMAT,Sunday,Bank Holiday,Bengaluru,India,2023,Y,All,HR_ADMIN,2022-11-15
+HOL000049,,2023-10-12,Thursday,Bank Holiday,Bengaluru,India,2023,N,"Sales,Marketing",HR_ADMIN,2022-11-15
+HOL000050,Christmas,2023-07-16,Sunday,Religious Holiday,Bengaluru,India,2023,Y,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000051,New Year,2023-03-06,Monday,National Holiday,Bengaluru,India,2023,N,"Sales,Marketing",HR_ADMIN,2022-11-15
+HOL000052,Good Friday,2023-08-02,Wednesday,Company Holiday,Singapore,Singapore,2023,N,All,HR_ADMIN,2022-11-15
+HOL000053,Christmas,2023-08-03,Thursday,Religious Holiday,Singapore,Singapore,2023,N,All,HR_ADMIN,2022-11-15
+HOL000054,Chinese New Year,2023-07-01,Saturday,National Holiday,Singapore,Singapore,2023,N,All,HR_ADMIN,2022-11-15
+HOL000055,Hari Raya Puasa,2023-09-08,Friday,National Holiday,Singapore,Singapore,2023,Y,All,HR_ADMIN,2022-11-15
+HOL000056,,2023-12-10,Sunday,Religious Holiday,Singapore,Singapore,2023,N,All,HR_ADMIN,2022-11-15
+HOL000057,Good Friday,2023-11-27,Monday,Bank Holiday,Singapore,Singapore,2023,N,All,HR_ADMIN,2022-11-15
+HOL000058,Good Friday,2023-02-27,Monday,Bank Holiday,Singapore,Singapore,2023,N,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000059,Good Friday,2023-11-25,Saturday,Bank Holiday,Singapore,Singapore,2023,Y,All,HR_ADMIN,2022-11-15
+HOL000060,Christmas,INVALID-DATE-FORMAT,Sunday,Optional Holiday,Singapore,Singapore,1899,N,"Sales,Marketing",HR_ADMIN,2022-11-15
+HOL000061,National Day,2023-07-05,Wednesday,Company Holiday,Singapore,Singapore,2023,N,All,HR_ADMIN,2022-11-15
+HOL000062,Prophet Birthday,2023-06-09,Friday,National Holiday,Dubai,UAE,2023,Y,All,HR_ADMIN,2022-11-15
+HOL000063,,2023-08-10,Thursday,National Holiday,Dubai,UAE,2023,N,All,HR_ADMIN,2022-11-15
+HOL000064,New Year,2023-06-11,Sunday,Bank Holiday,Dubai,UAE,2023,Y,All,HR_ADMIN,2022-11-15
+HOL000065,Eid ul-Fitr,2023-10-06,Friday,Bank Holiday,Dubai,UAE,2023,N,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000066,Islamic New Year,2023-04-05,Wednesday,National Holiday,Dubai,UAE,2023,Y,All,HR_ADMIN,2022-11-15
+HOL000067,Eid ul-Fitr,2023-12-30,Saturday,Company Holiday,Dubai,UAE,2023,Y,"Sales,Marketing",HR_ADMIN,2022-11-15
+HOL000068,Eid ul-Adha,2023-10-23,Monday,Company Holiday,Dubai,UAE,2023,Y,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000069,New Year,2023-05-29,Monday,Optional Holiday,Dubai,UAE,2023,N,All,HR_ADMIN,2022-11-15
+HOL000070,,2023-04-25,Tuesday,Religious Holiday,Toronto,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000071,Presidents Day,2023-03-08,Wednesday,National Holiday,Toronto,USA,2023,Y,All,HR_ADMIN,2022-11-15
+HOL000072,Thanksgiving,INVALID-DATE-FORMAT,Wednesday,Company Holiday,Toronto,USA,2023,Y,"Sales,Marketing",HR_ADMIN,2022-11-15
+HOL000073,Presidents Day,2023-07-20,Thursday,Optional Holiday,Toronto,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000074,MLK Day,2023-03-16,Thursday,National Holiday,Toronto,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000075,Memorial Day,2023-07-04,Saturday,National Holiday,Toronto,USA,2023,Y,All,HR_ADMIN,2022-11-15
+HOL000076,Labor Day,2023-03-14,Tuesday,Company Holiday,Toronto,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000077,,2023-04-05,Wednesday,Bank Holiday,Toronto,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000078,Memorial Day,2023-07-22,Saturday,Optional Holiday,Toronto,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000079,Columbus Day,2023-08-09,Wednesday,Bank Holiday,Toronto,USA,2023,N,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000080,Memorial Day,2023-12-22,Friday,Optional Holiday,Toronto,USA,1899,N,All,HR_ADMIN,2022-11-15
+HOL000081,Memorial Day,2023-04-08,Saturday,Company Holiday,Toronto,USA,2023,N,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000082,Christmas,2023-08-03,Thursday,National Holiday,Toronto,USA,2023,N,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000083,Labor Day,2023-11-20,Monday,National Holiday,Toronto,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000084,,INVALID-DATE-FORMAT,Friday,Bank Holiday,Sydney,USA,2023,Y,All,HR_ADMIN,2022-11-15
+HOL000085,Veterans Day,2023-12-10,Sunday,Religious Holiday,Sydney,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000086,MLK Day,2023-03-17,Friday,Company Holiday,Sydney,USA,2023,N,"Sales,Marketing",HR_ADMIN,2022-11-15
+HOL000087,Thanksgiving,2023-11-06,Monday,National Holiday,Sydney,USA,2023,N,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000088,Christmas,2023-12-16,Saturday,Bank Holiday,Sydney,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000089,Thanksgiving,2023-11-04,Saturday,Company Holiday,Sydney,USA,2023,Y,All,HR_ADMIN,2022-11-15
+HOL000090,MLK Day,2023-05-30,Tuesday,Bank Holiday,Sydney,USA,2023,N,"Engineering,Finance",HR_ADMIN,2022-11-15
+HOL000091,,2023-05-26,Friday,Bank Holiday,Sydney,USA,2023,Y,All,HR_ADMIN,2022-11-15
+HOL000092,Labor Day,2023-02-16,Thursday,Company Holiday,Sydney,USA,2023,Y,"Sales,Marketing",HR_ADMIN,2022-11-15
+HOL000093,New Year,2023-09-22,Friday,Optional Holiday,Sydney,USA,2023,Y,"Sales,Marketing",HR_ADMIN,2022-11-15
+HOL000094,Memorial Day,2023-11-12,Sunday,Religious Holiday,Sydney,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000095,Memorial Day,2023-10-11,Wednesday,Bank Holiday,Sydney,USA,2023,N,All,HR_ADMIN,2022-11-15
+HOL000096,Independence Day,INVALID-DATE-FORMAT,Friday,Religious Holiday,New York,USA,2024,N,All,HR_ADMIN,2023-11-15
+HOL000097,Presidents Day,2024-11-15,Friday,Religious Holiday,New York,USA,2024,N,All,HR_ADMIN,2023-11-15
+HOL000098,,2024-09-15,Sunday,Optional Holiday,New York,USA,2024,N,All,HR_ADMIN,2023-11-15
+HOL000099,Columbus Day,2024-09-07,Saturday,Optional Holiday,New York,USA,2024,N,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000100,Thanksgiving,2024-01-17,Saturday,Optional Holiday,New York,USA,1899,N,All,HR_ADMIN,2023-11-15
+HOL000101,Veterans Day,2024-08-31,Saturday,National Holiday,New York,USA,2024,Y,All,HR_ADMIN,2023-11-15
+HOL000102,MLK Day,2024-08-05,Monday,National Holiday,New York,USA,2024,N,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000103,Christmas,2024-08-15,Thursday,Religious Holiday,New York,USA,2024,N,All,HR_ADMIN,2023-11-15
+HOL000104,Christmas,2024-02-05,Monday,National Holiday,New York,USA,2024,N,All,HR_ADMIN,2023-11-15
+HOL000105,,2024-11-22,Friday,Religious Holiday,New York,USA,2024,N,All,HR_ADMIN,2023-11-15
+HOL000106,Veterans Day,2024-10-26,Saturday,National Holiday,New York,USA,2024,N,All,HR_ADMIN,2023-11-15
+HOL000107,Veterans Day,2024-08-30,Friday,Optional Holiday,New York,USA,2024,Y,All,HR_ADMIN,2023-11-15
+HOL000108,New Year,INVALID-DATE-FORMAT,Sunday,Bank Holiday,New York,USA,2024,Y,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000109,Summer Bank Holiday,2024-02-06,Tuesday,Bank Holiday,London,UK,2024,N,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000110,Easter Monday,2024-01-03,Wednesday,Company Holiday,London,UK,2024,Y,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000111,Christmas Day,2024-05-10,Friday,Optional Holiday,London,UK,2024,Y,All,HR_ADMIN,2023-11-15
+HOL000112,,2024-06-23,Sunday,Bank Holiday,London,UK,2024,Y,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000113,Easter Monday,2024-04-04,Thursday,Company Holiday,London,UK,2024,N,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000114,Good Friday,2024-08-10,Saturday,Bank Holiday,London,UK,2024,N,All,HR_ADMIN,2023-11-15
+HOL000115,Early May Bank Holiday,2024-12-25,Wednesday,Company Holiday,London,UK,2024,Y,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000116,Spring Bank Holiday,2024-07-09,Tuesday,Bank Holiday,London,UK,2024,N,All,HR_ADMIN,2023-11-15
+HOL000117,Christmas Day,2024-05-30,Thursday,Company Holiday,London,UK,2024,N,All,HR_ADMIN,2023-11-15
+HOL000118,Spring Bank Holiday,2024-07-21,Sunday,Religious Holiday,London,UK,2024,N,All,HR_ADMIN,2023-11-15
+HOL000119,,2024-11-16,Saturday,Optional Holiday,London,UK,2024,N,All,HR_ADMIN,2023-11-15
+HOL000120,Holi,INVALID-DATE-FORMAT,Wednesday,Religious Holiday,Mumbai,India,1899,N,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000121,Makar Sankranti,2024-10-16,Wednesday,Religious Holiday,Mumbai,India,2024,N,All,HR_ADMIN,2023-11-15
+HOL000122,Christmas,2024-11-12,Tuesday,Bank Holiday,Mumbai,India,2024,N,All,HR_ADMIN,2023-11-15
+HOL000123,Diwali,2024-09-01,Sunday,National Holiday,Mumbai,India,2024,Y,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000124,Diwali,2024-02-10,Saturday,Religious Holiday,Mumbai,India,2024,N,All,HR_ADMIN,2023-11-15
+HOL000125,Holi,2024-01-22,Saturday,Optional Holiday,Mumbai,India,2024,N,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000126,,2024-08-24,Saturday,Company Holiday,Mumbai,India,2024,N,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000127,Independence Day,2024-01-26,Friday,Bank Holiday,Mumbai,India,2024,Y,All,HR_ADMIN,2023-11-15
+HOL000128,Makar Sankranti,2024-03-18,Monday,Company Holiday,Mumbai,India,2024,N,All,HR_ADMIN,2023-11-15
+HOL000129,Diwali,2024-02-12,Monday,Bank Holiday,Mumbai,India,2024,N,All,HR_ADMIN,2023-11-15
+HOL000130,Makar Sankranti,2024-04-02,Tuesday,Company Holiday,Mumbai,India,2024,N,All,HR_ADMIN,2023-11-15
+HOL000131,Gandhi Jayanti,2024-10-21,Monday,National Holiday,Mumbai,India,2024,N,All,HR_ADMIN,2023-11-15
+HOL000132,Republic Day,INVALID-DATE-FORMAT,Wednesday,Optional Holiday,Mumbai,India,2024,N,All,HR_ADMIN,2023-11-15
+HOL000133,,2024-05-10,Friday,National Holiday,Mumbai,India,2024,N,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000134,Eid ul-Fitr,2024-09-12,Thursday,Religious Holiday,Bengaluru,India,2024,N,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000135,Diwali,2024-05-04,Saturday,Optional Holiday,Bengaluru,India,2024,Y,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000136,Republic Day,2024-06-20,Thursday,National Holiday,Bengaluru,India,2024,N,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000137,Christmas,2024-06-19,Wednesday,Bank Holiday,Bengaluru,India,2024,Y,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000138,Holi,2024-05-31,Friday,National Holiday,Bengaluru,India,2024,N,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000139,Christmas,2024-10-22,Tuesday,National Holiday,Bengaluru,India,2024,N,All,HR_ADMIN,2023-11-15
+HOL000140,,2024-11-02,Saturday,Optional Holiday,Bengaluru,India,1899,N,All,HR_ADMIN,2023-11-15
+HOL000141,Dussehra,2024-12-10,Tuesday,Religious Holiday,Bengaluru,India,2024,N,All,HR_ADMIN,2023-11-15
+HOL000142,Good Friday,2024-09-13,Friday,Company Holiday,Singapore,Singapore,2024,N,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000143,Christmas,2024-08-01,Thursday,Company Holiday,Singapore,Singapore,2024,N,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000144,Christmas,INVALID-DATE-FORMAT,Sunday,Bank Holiday,Singapore,Singapore,2024,N,All,HR_ADMIN,2023-11-15
+HOL000145,Good Friday,2024-12-14,Saturday,National Holiday,Singapore,Singapore,2024,N,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000146,Chinese New Year,2024-06-13,Thursday,Religious Holiday,Singapore,Singapore,2024,N,All,HR_ADMIN,2023-11-15
+HOL000147,,2024-03-22,Friday,Optional Holiday,Singapore,Singapore,2024,N,All,HR_ADMIN,2023-11-15
+HOL000148,Labour Day,2024-11-04,Monday,Company Holiday,Singapore,Singapore,2024,N,All,HR_ADMIN,2023-11-15
+HOL000149,National Day,2024-03-21,Thursday,National Holiday,Singapore,Singapore,2024,N,All,HR_ADMIN,2023-11-15
+HOL000150,Deepavali,2024-07-10,Saturday,Religious Holiday,Singapore,Singapore,2024,N,All,HR_ADMIN,2023-11-15
+HOL000151,Chinese New Year,2024-11-27,Wednesday,Religious Holiday,Singapore,Singapore,2024,N,All,HR_ADMIN,2023-11-15
+HOL000152,New Year,2024-04-17,Wednesday,Religious Holiday,Dubai,UAE,2024,N,All,HR_ADMIN,2023-11-15
+HOL000153,UAE National Day,2024-10-06,Sunday,National Holiday,Dubai,UAE,2024,N,All,HR_ADMIN,2023-11-15
+HOL000154,,2024-09-03,Tuesday,Religious Holiday,Dubai,UAE,2024,Y,All,HR_ADMIN,2023-11-15
+HOL000155,New Year,2024-12-11,Wednesday,Bank Holiday,Dubai,UAE,2024,Y,All,HR_ADMIN,2023-11-15
+HOL000156,Eid ul-Adha,INVALID-DATE-FORMAT,Tuesday,Company Holiday,Dubai,UAE,2024,N,All,HR_ADMIN,2023-11-15
+HOL000157,Eid ul-Adha,2024-06-20,Thursday,Company Holiday,Dubai,UAE,2024,N,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000158,New Year,2024-12-21,Saturday,Religious Holiday,Dubai,UAE,2024,Y,All,HR_ADMIN,2023-11-15
+HOL000159,Eid ul-Adha,2024-10-24,Thursday,Bank Holiday,Dubai,UAE,2024,N,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000160,Prophet Birthday,2024-08-15,Thursday,Religious Holiday,Dubai,UAE,1899,N,All,HR_ADMIN,2023-11-15
+HOL000161,,2024-04-19,Friday,Religious Holiday,Dubai,UAE,2024,N,All,HR_ADMIN,2023-11-15
+HOL000162,Eid ul-Fitr,2024-11-19,Tuesday,Religious Holiday,Dubai,UAE,2024,N,All,HR_ADMIN,2023-11-15
+HOL000163,Labor Day,2024-12-15,Sunday,Optional Holiday,Toronto,USA,2024,N,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000164,MLK Day,2024-01-07,Sunday,Company Holiday,Toronto,USA,2024,Y,All,HR_ADMIN,2023-11-15
+HOL000165,Columbus Day,2024-02-14,Wednesday,Religious Holiday,Toronto,USA,2024,Y,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000166,Thanksgiving,2024-04-13,Saturday,Optional Holiday,Toronto,USA,2024,N,All,HR_ADMIN,2023-11-15
+HOL000167,Independence Day,2024-03-25,Monday,Company Holiday,Toronto,USA,2024,Y,All,HR_ADMIN,2023-11-15
+HOL000168,,INVALID-DATE-FORMAT,Sunday,Company Holiday,Toronto,USA,2024,Y,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000169,Christmas,2024-10-22,Tuesday,Company Holiday,Toronto,USA,2024,N,All,HR_ADMIN,2023-11-15
+HOL000170,Presidents Day,2024-11-04,Monday,Religious Holiday,Toronto,USA,2024,Y,All,HR_ADMIN,2023-11-15
+HOL000171,MLK Day,2024-03-02,Saturday,Optional Holiday,Toronto,USA,2024,N,All,HR_ADMIN,2023-11-15
+HOL000172,Columbus Day,2024-11-21,Thursday,Religious Holiday,Toronto,USA,2024,N,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000173,New Year,2024-12-02,Monday,National Holiday,Toronto,USA,2024,N,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000174,Presidents Day,2024-10-13,Sunday,National Holiday,Sydney,USA,2024,Y,All,HR_ADMIN,2023-11-15
+HOL000175,,2024-07-12,Saturday,Optional Holiday,Sydney,USA,2024,N,All,HR_ADMIN,2023-11-15
+HOL000176,MLK Day,2024-10-02,Wednesday,National Holiday,Sydney,USA,2024,N,All,HR_ADMIN,2023-11-15
+HOL000177,MLK Day,2024-06-22,Saturday,Religious Holiday,Sydney,USA,2024,Y,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000178,Memorial Day,2024-08-18,Sunday,Religious Holiday,Sydney,USA,2024,N,All,HR_ADMIN,2023-11-15
+HOL000179,New Year,2024-04-11,Thursday,National Holiday,Sydney,USA,2024,Y,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000180,New Year,INVALID-DATE-FORMAT,Friday,Bank Holiday,Sydney,USA,1899,N,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000181,Thanksgiving,2024-12-19,Thursday,Optional Holiday,Sydney,USA,2024,N,All,HR_ADMIN,2023-11-15
+HOL000182,,2024-07-07,Sunday,Religious Holiday,Sydney,USA,2024,N,"Sales,Marketing",HR_ADMIN,2023-11-15
+HOL000183,Veterans Day,2024-04-22,Monday,National Holiday,Sydney,USA,2024,Y,All,HR_ADMIN,2023-11-15
+HOL000184,MLK Day,2024-10-24,Thursday,Religious Holiday,Sydney,USA,2024,N,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000185,MLK Day,2024-11-12,Tuesday,National Holiday,Sydney,USA,2024,N,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000186,Columbus Day,2024-04-21,Sunday,Optional Holiday,Sydney,USA,2024,Y,All,HR_ADMIN,2023-11-15
+HOL000187,Presidents Day,2024-09-30,Monday,National Holiday,Sydney,USA,2024,N,"Engineering,Finance",HR_ADMIN,2023-11-15
+HOL000188,Presidents Day,2025-04-24,Thursday,Religious Holiday,New York,USA,2025,N,All,HR_ADMIN,2024-11-15
+HOL000189,,2025-03-25,Tuesday,Religious Holiday,New York,USA,2025,N,"Sales,Marketing",HR_ADMIN,2024-11-15
+HOL000190,MLK Day,2025-07-15,Tuesday,Religious Holiday,New York,USA,2025,N,All,HR_ADMIN,2024-11-15
+HOL000191,Independence Day,2025-05-30,Friday,Optional Holiday,New York,USA,2025,N,All,HR_ADMIN,2024-11-15
+HOL000192,Independence Day,INVALID-DATE-FORMAT,Sunday,Company Holiday,New York,USA,2025,N,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000193,Veterans Day,2025-08-23,Saturday,Bank Holiday,New York,USA,2025,N,"Sales,Marketing",HR_ADMIN,2024-11-15
+HOL000194,Thanksgiving,2025-02-14,Friday,Bank Holiday,New York,USA,2025,N,All,HR_ADMIN,2024-11-15
+HOL000195,Independence Day,2025-12-31,Wednesday,Religious Holiday,New York,USA,2025,N,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000196,,2025-06-13,Friday,Company Holiday,New York,USA,2025,N,All,HR_ADMIN,2024-11-15
+HOL000197,Independence Day,2025-06-28,Saturday,Company Holiday,New York,USA,2025,N,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000198,Independence Day,2025-09-04,Thursday,Bank Holiday,New York,USA,2025,N,"Sales,Marketing",HR_ADMIN,2024-11-15
+HOL000199,Good Friday,2025-07-27,Sunday,Company Holiday,London,UK,2025,N,All,HR_ADMIN,2024-11-15
+HOL000200,Early May Bank Holiday,2025-12-18,Saturday,Religious Holiday,London,UK,1899,N,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000201,Summer Bank Holiday,2025-03-26,Wednesday,Company Holiday,London,UK,2025,N,All,HR_ADMIN,2024-11-15
+HOL000202,New Year,2025-12-29,Monday,Religious Holiday,London,UK,2025,Y,All,HR_ADMIN,2024-11-15
+HOL000203,,2025-01-14,Tuesday,Optional Holiday,London,UK,2025,N,All,HR_ADMIN,2024-11-15
+HOL000204,Boxing Day,INVALID-DATE-FORMAT,Friday,National Holiday,London,UK,2025,N,All,HR_ADMIN,2024-11-15
+HOL000205,Early May Bank Holiday,2025-04-23,Wednesday,Bank Holiday,London,UK,2025,N,All,HR_ADMIN,2024-11-15
+HOL000206,Good Friday,2025-02-07,Friday,Religious Holiday,London,UK,2025,N,"Sales,Marketing",HR_ADMIN,2024-11-15
+HOL000207,Spring Bank Holiday,2025-08-02,Saturday,Optional Holiday,London,UK,2025,Y,"Sales,Marketing",HR_ADMIN,2024-11-15
+HOL000208,Boxing Day,2025-03-12,Wednesday,Bank Holiday,London,UK,2025,N,All,HR_ADMIN,2024-11-15
+HOL000209,Spring Bank Holiday,2025-04-15,Tuesday,National Holiday,London,UK,2025,N,All,HR_ADMIN,2024-11-15
+HOL000210,,2025-06-08,Sunday,Bank Holiday,London,UK,2025,Y,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000211,Easter Monday,2025-10-09,Thursday,National Holiday,London,UK,2025,N,All,HR_ADMIN,2024-11-15
+HOL000212,Boxing Day,2025-11-22,Saturday,Optional Holiday,London,UK,2025,Y,All,HR_ADMIN,2024-11-15
+HOL000213,Republic Day,2025-07-26,Saturday,Company Holiday,Mumbai,India,2025,N,"Sales,Marketing",HR_ADMIN,2024-11-15
+HOL000214,Gandhi Jayanti,2025-11-24,Monday,Company Holiday,Mumbai,India,2025,N,All,HR_ADMIN,2024-11-15
+HOL000215,Independence Day,2025-02-11,Tuesday,National Holiday,Mumbai,India,2025,N,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000216,Dussehra,INVALID-DATE-FORMAT,Saturday,Religious Holiday,Mumbai,India,2025,N,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000217,,2025-01-12,Sunday,Optional Holiday,Mumbai,India,2025,N,All,HR_ADMIN,2024-11-15
+HOL000218,Makar Sankranti,2025-04-28,Monday,Company Holiday,Mumbai,India,2025,Y,All,HR_ADMIN,2024-11-15
+HOL000219,Gandhi Jayanti,2025-07-18,Friday,Company Holiday,Mumbai,India,2025,N,All,HR_ADMIN,2024-11-15
+HOL000220,Diwali,2025-06-01,Sunday,Company Holiday,Mumbai,India,1899,N,All,HR_ADMIN,2024-11-15
+HOL000221,Christmas,2025-01-14,Tuesday,Bank Holiday,Mumbai,India,2025,N,All,HR_ADMIN,2024-11-15
+HOL000222,Dussehra,2025-11-13,Thursday,Optional Holiday,Mumbai,India,2025,N,All,HR_ADMIN,2024-11-15
+HOL000223,Independence Day,2025-10-09,Thursday,National Holiday,Bengaluru,India,2025,Y,All,HR_ADMIN,2024-11-15
+HOL000224,,2025-02-21,Friday,Company Holiday,Bengaluru,India,2025,N,All,HR_ADMIN,2024-11-15
+HOL000225,Holi,2025-09-03,Saturday,National Holiday,Bengaluru,India,2025,N,"Sales,Marketing",HR_ADMIN,2024-11-15
+HOL000226,Eid ul-Fitr,2025-04-07,Monday,National Holiday,Bengaluru,India,2025,N,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000227,Republic Day,2025-03-18,Tuesday,Religious Holiday,Bengaluru,India,2025,N,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000228,Republic Day,INVALID-DATE-FORMAT,Thursday,Religious Holiday,Bengaluru,India,2025,Y,All,HR_ADMIN,2024-11-15
+HOL000229,Makar Sankranti,2025-12-23,Tuesday,Bank Holiday,Bengaluru,India,2025,N,"Sales,Marketing",HR_ADMIN,2024-11-15
+HOL000230,Republic Day,2025-12-07,Sunday,Religious Holiday,Bengaluru,India,2025,N,All,HR_ADMIN,2024-11-15
+HOL000231,,2025-11-15,Saturday,Optional Holiday,Bengaluru,India,2025,N,All,HR_ADMIN,2024-11-15
+HOL000232,Republic Day,2025-07-21,Monday,Company Holiday,Bengaluru,India,2025,N,All,HR_ADMIN,2024-11-15
+HOL000233,Holi,2025-12-20,Saturday,National Holiday,Bengaluru,India,2025,N,All,HR_ADMIN,2024-11-15
+HOL000234,Independence Day,2025-12-05,Friday,Bank Holiday,Bengaluru,India,2025,Y,All,HR_ADMIN,2024-11-15
+HOL000235,Christmas,2025-09-28,Sunday,Bank Holiday,Bengaluru,India,2025,N,All,HR_ADMIN,2024-11-15
+HOL000236,Gandhi Jayanti,2025-08-28,Thursday,Optional Holiday,Bengaluru,India,2025,N,All,HR_ADMIN,2024-11-15
+HOL000237,Deepavali,2025-02-21,Friday,Company Holiday,Singapore,Singapore,2025,N,All,HR_ADMIN,2024-11-15
+HOL000238,,2025-07-07,Monday,Religious Holiday,Singapore,Singapore,2025,N,All,HR_ADMIN,2024-11-15
+HOL000239,National Day,2025-02-25,Tuesday,Optional Holiday,Singapore,Singapore,2025,N,All,HR_ADMIN,2024-11-15
+HOL000240,Christmas,INVALID-DATE-FORMAT,Wednesday,Company Holiday,Singapore,Singapore,1899,N,All,HR_ADMIN,2024-11-15
+HOL000241,Chinese New Year,2025-06-20,Friday,Bank Holiday,Singapore,Singapore,2025,N,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000242,New Year,2025-09-22,Monday,National Holiday,Singapore,Singapore,2025,N,All,HR_ADMIN,2024-11-15
+HOL000243,Chinese New Year,2025-08-28,Thursday,Optional Holiday,Singapore,Singapore,2025,Y,"Sales,Marketing",HR_ADMIN,2024-11-15
+HOL000244,Vesak Day,2025-10-03,Friday,Company Holiday,Singapore,Singapore,2025,N,"Sales,Marketing",HR_ADMIN,2024-11-15
+HOL000245,,2025-03-24,Monday,Religious Holiday,Singapore,Singapore,2025,N,All,HR_ADMIN,2024-11-15
+HOL000246,Christmas,2025-07-02,Wednesday,Company Holiday,Singapore,Singapore,2025,Y,All,HR_ADMIN,2024-11-15
+HOL000247,Christmas,2025-03-09,Sunday,Company Holiday,Singapore,Singapore,2025,Y,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000248,Good Friday,2025-08-03,Sunday,Religious Holiday,Singapore,Singapore,2025,N,All,HR_ADMIN,2024-11-15
+HOL000249,Labour Day,2025-12-27,Saturday,Company Holiday,Singapore,Singapore,2025,N,All,HR_ADMIN,2024-11-15
+HOL000250,Eid ul-Fitr,2025-03-17,Saturday,National Holiday,Dubai,UAE,2025,N,All,HR_ADMIN,2024-11-15
+HOL000251,UAE National Day,2025-12-06,Saturday,Optional Holiday,Dubai,UAE,2025,Y,"Sales,Marketing",HR_ADMIN,2024-11-15
+HOL000252,,INVALID-DATE-FORMAT,Saturday,Bank Holiday,Dubai,UAE,2025,N,All,HR_ADMIN,2024-11-15
+HOL000253,UAE National Day,2025-11-21,Friday,Bank Holiday,Dubai,UAE,2025,N,All,HR_ADMIN,2024-11-15
+HOL000254,UAE National Day,2025-12-02,Tuesday,Optional Holiday,Dubai,UAE,2025,N,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000255,New Year,2025-08-09,Saturday,National Holiday,Dubai,UAE,2025,N,All,HR_ADMIN,2024-11-15
+HOL000256,Eid ul-Fitr,2025-08-13,Wednesday,Religious Holiday,Dubai,UAE,2025,Y,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000257,Commemoration Day,2025-05-08,Thursday,Optional Holiday,Dubai,UAE,2025,N,All,HR_ADMIN,2024-11-15
+HOL000258,Islamic New Year,2025-05-09,Friday,National Holiday,Dubai,UAE,2025,Y,All,HR_ADMIN,2024-11-15
+HOL000259,,2025-06-06,Friday,National Holiday,Dubai,UAE,2025,Y,All,HR_ADMIN,2024-11-15
+HOL000260,Eid ul-Fitr,2025-02-16,Sunday,National Holiday,Dubai,UAE,1899,N,All,HR_ADMIN,2024-11-15
+HOL000261,Eid ul-Fitr,2025-11-16,Sunday,Religious Holiday,Dubai,UAE,2025,N,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000262,Thanksgiving,2025-04-16,Wednesday,Optional Holiday,Toronto,USA,2025,N,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000263,Memorial Day,2025-01-07,Tuesday,Company Holiday,Toronto,USA,2025,Y,"Sales,Marketing",HR_ADMIN,2024-11-15
+HOL000264,MLK Day,INVALID-DATE-FORMAT,Tuesday,Optional Holiday,Toronto,USA,2025,N,All,HR_ADMIN,2024-11-15
+HOL000265,Presidents Day,2025-03-24,Monday,Religious Holiday,Toronto,USA,2025,Y,All,HR_ADMIN,2024-11-15
+HOL000266,,2025-10-13,Monday,Bank Holiday,Toronto,USA,2025,N,All,HR_ADMIN,2024-11-15
+HOL000267,MLK Day,2025-07-24,Thursday,National Holiday,Toronto,USA,2025,N,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000268,Independence Day,2025-02-02,Sunday,National Holiday,Toronto,USA,2025,N,"Sales,Marketing",HR_ADMIN,2024-11-15
+HOL000269,MLK Day,2025-09-30,Tuesday,Bank Holiday,Toronto,USA,2025,Y,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000270,New Year,2025-05-07,Wednesday,Company Holiday,Toronto,USA,2025,N,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000271,Presidents Day,2025-07-03,Thursday,Bank Holiday,Sydney,USA,2025,Y,"Sales,Marketing",HR_ADMIN,2024-11-15
+HOL000272,New Year,2025-05-16,Friday,Religious Holiday,Sydney,USA,2025,Y,"Sales,Marketing",HR_ADMIN,2024-11-15
+HOL000273,,2025-12-09,Tuesday,Religious Holiday,Sydney,USA,2025,Y,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000274,Columbus Day,2025-03-24,Monday,National Holiday,Sydney,USA,2025,N,All,HR_ADMIN,2024-11-15
+HOL000275,Columbus Day,2025-11-25,Saturday,Company Holiday,Sydney,USA,2025,N,"Sales,Marketing",HR_ADMIN,2024-11-15
+HOL000276,Christmas,INVALID-DATE-FORMAT,Sunday,National Holiday,Sydney,USA,2025,N,All,HR_ADMIN,2024-11-15
+HOL000277,Christmas,2025-05-01,Thursday,Optional Holiday,Sydney,USA,2025,N,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000278,Memorial Day,2025-11-14,Friday,Bank Holiday,Sydney,USA,2025,N,"Engineering,Finance",HR_ADMIN,2024-11-15
+HOL000279,Christmas,2025-06-19,Thursday,Optional Holiday,Sydney,USA,2025,N,"Engineering,Finance",HR_ADMIN,2024-11-15

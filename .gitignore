@@ -1,0 +1,26 @@
+# Secrets — NEVER commit
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Large upload/report files (generated at runtime)
+data/uploads/
+reports/
+*.db
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Sample data IS committed (needed for demo)
+!data/sample/
